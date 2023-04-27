@@ -1,0 +1,14 @@
+<form nz-form [nzLayout]="'inline'" (ngSubmit)="onSubmit()" [formGroup]="customerForm" >
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="name">Name</nz-form-label>
+      <nz-form-control [nzSpan]="12">
+        <input nz-input name="name" type="text" id="name" formControlName="name">
+      </nz-form-control>
+    </nz-form-item >
+    <nz-form-item>
+        <nz-form-control>
+          <app-button type="submit"   nzType="primary" [disabled]="customerForm.invalid" [label]="'Submit'"></app-button>
+        </nz-form-control>
+      </nz-form-item>
+      
+</form>

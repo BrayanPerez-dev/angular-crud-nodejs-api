@@ -1,0 +1,8 @@
+<nz-modal [(nzVisible)]="isVisible" nzTitle="Editar" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+  <ng-container *nzModalContent>
+    <div class="modal-body"> 
+      <ng-content select="[modal-body]"></ng-content>
+    </div>
+  </ng-container>
+</nz-modal>
+

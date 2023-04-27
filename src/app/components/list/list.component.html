@@ -1,0 +1,12 @@
+<h3 [ngStyle]="{ 'margin-botton.px': 16 }">Customers</h3>
+<nz-list nzBordered nzHeader="Header" nzFooter="Footer">
+  <nz-list-item *ngFor="let item of customers">
+    <span nz-typography><mark>Name</mark></span>
+    {{ item.customer_name }}
+ 
+    <app-button  nzType="primary"  [nzShape]="'round'"   [label]="'Edit Customer'" (click)="onEdit(item)"></app-button>
+
+    <app-button  nzType="primary"  [nzShape]="'round'"    [nzDanger]="true" [label]="'Delete Customer'" (click)="onDelete(item)"></app-button>
+
+  </nz-list-item>
+</nz-list>
